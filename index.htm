@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- This document was automatically generated with yamlpp
+     (see http://www.lri.fr/~filliatr/yamlpp.en.html),
+     with the following command:
+./yamlpp macros.prehtml -l en publications/complete.prehtml -o publications/complete.html  -->
+
+
+<!--<h1 align=center> ProVal</h1>-->
+
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+EmNets - Summer16
+</title>
+<style>
+body                  {background-color:#ddd;font-family:"Times",sans-serif;font-size:100%;}
+h1                    {font-size:19pt;}
+h2                    {font-size:15pt;}
+
+div#wrap              {margin:auto;width:80%;background-color:#fff;padding:1em;border:5px solid #ccc;}
+
+div#header            {background-color:#356aa0;color:#fff;padding:1em;margin-bottom:.5em;margin-top:2.5em;}
+div#header h1         {margin:0;padding:0;}
+div#header h2         {margin:0;padding:0;}
+
+
+div#nav               {background-color:#333;color:#eee;width:100%;text-align:center;margin-bottom:.5em;float:left;}
+div#nav ul            {margin:0;padding:0;list-style:none;}
+div#nav ul li         {display:block;position:relative;float:left;}
+div#nav li ul         {display:none;}
+div#nav ul li a       {display:block;text-decoration:none;border-top:1px solid #ffffff;padding: 5px 15px 5px 15px;margin-left:1px;white-space:nowrap;background-color:#333;color:#eee;}
+div#nav ul li a:hover {color:#eee;background-color:#555;}
+div#nav li:hover ul   {display: block;position: absolute;}
+div#nav li:hover li   {float: none;}
+div#nav li a          {padding:5px;text-decoration:none;color:#eee;width:6em;border-right:1px solid #ccc;}
+div#nav li:hover a    {color:#eee;background-color:#555;}
+div#nav li:hover li a {width:16em;}
+div#nav li:hover li a:hover {color:#eee;background-color:#777;}
+
+
+
+div#content           {padding:2em 1em;}
+div#content h2        {border-bottom:1px solid #ddd;margin-bottom:.5em;}
+div#content img.fancy {border:1px solid #ddd;padding:.5em;}
+div#content img.left  {float:left;margin-right:1em;}
+div#content img.right {float:right;margin-left:1em;}
+div#content table     {font-size:100%;}
+
+div#footer            {text-align:center;margin-top:.5em;}
+div#footer a          {color:#000;}
+
+div#padding               {background-color:#333;color:#eee;float:right;width:100%;margin-bottom:.5em;margin:0;padding:0;}
+div#padding a            {display:inline;margin:0;padding:0;margin-right:.5em;padding:5px;text-decoration:none;color:#eee;float:right;}
+
+
+.coqdoc a:visited.idref {color: #416DFF; text-decoration: none;}
+.coqdoc a:link.idref    {color: #416DFF; text-decoration: none;}
+.coqdoc a:hover.idref   {text-decoration: none;}
+.coqdoc a:active.idref  {text-decoration: none;}
+
+.coqdoc a:visited.modref {color: #416DFF; text-decoration: none;}
+.coqdoc a:link.modref    {color: #416DFF; text-decoration: none;}
+.coqdoc a:hover.modref   {text-decoration: none;}
+.coqdoc a:active.modref  {text-decoration: none;}
+
+.coqdoc .id {display: inline;}
+.coqdoc .id[type="constructor"]  {color: rgb(60%,0%,0%);}
+.coqdoc .id[type="var"]          {color: rgb(40%,0%,40%);}
+.coqdoc .id[type="variable"]     {color: rgb(40%,0%,40%);}
+.coqdoc .id[type="definition"]   {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="abbreviation"] {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="lemma"]        {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="instance"]     {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="projection"]   {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="method"]       {color: rgb(0%,40%,0%);}
+.coqdoc .id[type="inductive"]    {color: rgb(0%,0%,80%);}
+.coqdoc .id[type="record"]       {color: rgb(0%,0%,80%);}
+.coqdoc .id[type="class"]        {color: rgb(0%,0%,80%);}
+.coqdoc .id[type="keyword"]      {color : #cf1d1d;}
+
+.coqdoc h1 {font-size: 110%;}
+.coqdoc h2 {font-size: 100%;}
+.coqdoc h3 {font-size: 100%;}
+
+
+.why3doc a:visited {color : #416DFF; text-decoration : none; }
+.why3doc a:link {color : #416DFF; text-decoration : none;}
+.why3doc a:hover {color : Red; text-decoration : none; background-color: #5FFF88}
+.why3doc a:active {color : Red; text-decoration : underline; }
+.why3doc .comment { color : #990000 }
+.why3doc .keyword1 { color : purple; font-weight : bold }
+.why3doc .keyword2 { color : blue; font-weight : bold }
+.why3doc .superscript { font-size : 4 }
+.why3doc .subscript { font-size : 4 }
+.why3doc .warning { color : Red ; font-weight : bold }
+.why3doc .info { margin-left : 3em; margin-right : 3em }
+.why3doc .code { color : #465F91 ; }
+.why3doc h1 { font-size : 20pt ; border: 1px solid #000000; margin-top: 10px; margin-bottom: 10px;text-align: center; background-color: #90BDFF ;padding: 10px; }
+.why3doc h2 { font-size : 18pt ; border: 1px solid #000000; margin-top: 8px; margin-bottom: 8px;text-align: left; background-color: #90DDFF ;padding: 8px; }
+.why3doc h3 { font-size : 16pt ; border: 1px solid #000000; margin-top: 6px; margin-bottom: 6px;text-align: left; background-color: #90EDFF ;padding: 6px; }
+.why3doc h4 { font-size : 14pt ; border: 1px solid #000000; margin-top: 4px; margin-bottom: 4px;text-align: left; background-color: #90FDFF ;padding: 4px; }
+.why3doc h5 { font-size : 12pt ; border: 1px solid #000000; margin-top: 2px; margin-bottom: 2px;text-align: left; background-color: #90BDFF ; padding: 2px; }
+.why3doc h6 { font-size : 10pt ; border: 1px solid #000000; margin-top: 0px; margin-bottom: 0px;text-align: left; background-color: #90BDFF ; padding: 0px; }
+.why3doc .typetable { border-style : hidden }
+.why3doc .indextable { border-style : hidden }
+.why3doc .paramstable { border-style : hidden ; padding: 5pt 5pt}
+.why3doc body { background-color : White }
+.why3doc tr { background-color : White }
+.why3doc td.typefieldcomment { background-color : #FFFFFF }
+.why3doc pre { margin-top: 1px ; margin-bottom: 2px; }
+.why3doc div.sig_block {margin-left: 2em}
+
+blockquote {margin-top: -1ex; margin-bottom: -.5ex; margin-left:5.5em; }
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;    
+}
+
+.bordered {
+    border: solid #aaa 2px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 2px #ccc; 
+    -moz-box-shadow: 0 2px 2px #ccc; 
+    box-shadow: 0 2px 2px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}
+    
+.bordered td, .bordered th {
+    border-left: 2px solid #aaa;
+    border-top: 2px solid #aaa;
+    padding: 10px;
+    text-align: left;
+}
+
+.td-yellow {
+    background: #FCF44A;
+}
+
+.td-grey {
+    background: #D9D9D9;
+}
+
+.td-pink{
+    background: #FABF8F;
+}
+
+.td-green {
+    background: #92D050;
+}
+
+.td-blue{
+    background: #8DB4E2;
+}
+p.MsoNormal{
+mso-style-parent:"";
+margin-bottom:.0001pt;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+font-size:10.5000pt;
+margin-left:0pt; margin-right:0pt; margin-top:0pt
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div id="wrap">
+
+<div id="content">
+  <div>
+    <h1 align="center">EmNets Summer Seminar 2016 Program</h1>
+    <h4 align="right">
+      <span class="td-yellow">　</span>全组活动　　
+      <span class="td-pink">　</span>Network measurement　
+      <span class="td-blue">　</span>Wireless & mobile systems　　
+      <span class="td-green">　</span>IoT systems and applications
+    </h4>
+  </div>
+  <table class="bordered" width="97%">
+    <tr>
+      <td rowspan="17">第一天</td>
+      <td>Opening</td>
+      <td class="td-yellow" width="15%"><b>9:30</b>-10:30</td>
+      <td class="td-yellow"><b>The research directions of EmNets</b></td>
+      <td class="td-yellow">董玮</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey"></td>
+    </tr>
+    <tr>
+      <td rowspan="11">Recent work</td>
+      <td class="td-green" width="15%">10:05~10:35</td>
+      <td class="td-green">
+		<a href="#">
+		Multihop calibration for mobile sensing</a></td>
+      <td class="td-green">
+		<p class="MsoNormal">
+		<span style="font-family: 宋体; font-size: 12.0000pt"><font face="宋体">任伟</font>&amp;傅凯博</span></p>
+		</td>
+    </tr>
+    <tr>
+      <td class="td-green" width="15%">10:05~10:35</td>
+      <td class="td-green">
+		<a href="#">
+		TinyLink: a system for rapid prototyping of IoT devices</a></td>
+      <td class="td-green">
+		<p class="MsoNormal">
+		<span style="font-family: 宋体; font-size: 12.0000pt"><font face="宋体">管高扬</font></span></p>
+		</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">11:10 - 11:20</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey"></td>
+    </tr>
+    <tr>
+      <td class="td-blue" width="15%">11:10~11:40</td>
+      <td class="td-blue">
+		<a href="#">
+		Detecting click fraud for mobile applications</a></td>
+      <td class="td-blue">曹晨红</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%"></td>
+      <td class="td-grey">Lunch</td>
+      <td class="td-grey"></td>
+    </tr>
+    <tr>
+      <td class="td-blue" width="15%"><b>13:30</b>~14:00</td>
+      <td class="td-blue">
+		<a href="#">
+		Human identification using WiFi and acoustic signals</a></td>
+      <td class="td-blue">陈元瀛</td>
+    </tr>
+    <tr>
+      <td class="td-blue" width="15%">14:00~14:30</td>
+      <td class="td-blue">
+		<a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/AccuEst.pdf">
+		Towards accurate corruption estimation in ZigBee under cross-technology 
+		interference</a></td>
+      <td class="td-blue">陈共龙</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey"></td>
+    </tr>
+    <tr>
+      <td class="td-pink" width="15%">14:35~15:05</td>
+      <td class="td-pink">
+		<a href="#">
+		Preferential link tomography in dynamic networks</a></td>
+      <td class="td-pink">李惠康</td>
+    </tr>
+    <tr>
+      <td class="td-pink" width="15%">15:05~15:35</td>
+      <td class="td-pink">
+		<a href="#">
+		Understanding path reconstruction algorithm in multihop wireless 
+		networks</a></td>
+      <td class="td-pink">曹晨红</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey"></td>
+    </tr>
+    <tr>
+     <td rowspan="4">Topic 1:Novel Applications I</td>
+      <td class="td-green" width="15%">15:40~16:10</td>
+      <td class="td-green">
+		<a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/zhouhan_tagbeat-camera-ready.pdf">
+		[MobiCom&#39;16] Communication is Sensing: Making Sense of Mechanical 
+		Vibration Period with Sub-millisecond Accuracy Using Backscatter Signals
+		</a></td>
+      <td class="td-green">周寒</td>
+    </tr>
+    <tr>
+      <td class="td-green" width="15%">16:10~16:40</td>
+      <td class="td-green">
+		<a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/LiveLabs%20Building%20In-Situ%20Mobile%20Sensing%20%26%20Behavioural.pdf">
+		[MobiSys&#39;16]LiveLabs: Building In-Situ Mobile Sensing &amp; Behavioural 
+		Experimentation TestBeds</a></td>
+      <td class="td-green">郭凯</td>
+      
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">
+		Break</td>
+      <td class="td-grey">&nbsp;</td>
+      
+    </tr>
+    <tr>
+      <td class="td-green" width="15%">16:45~17:15</td>
+      <td class="td-green">
+		<a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/TransitLabel%20A%20Crowd-Sensing%20System%20for%20Automatic.pdf">
+		[MobiSys&#39;16]TransitLabel: A Crowd-Sensing System for Automatic Labeling 
+		of Transit Stations Semantics</a></td>
+      <td class="td-green">陈远</td>
+      
+    </tr>
+    <tr><td colspan="5">&nbsp;</td></tr>
+    <tr>
+      <td rowspan="12">第二天</td>
+      <td rowspan="5">Topic 1:Novel Applications II</td>
+      <td class="td-green" width="15%"><b>9:30</b>~10:15</td>
+      <td class="td-green">
+        <span style="line-height:24px;"><b>Rapid Prototyping for IoT Application:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/guangy/System%20Design%20for%20a%20Synergistic%2C%20Low%20Power%20MoteBLE%20Embedded%20Platform.pdf" target="_blank">
+		1.[IPSN&#39;16]System Design for a Synergistic, Low Power Mote/BLE Embedded 
+		Platform</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/guangy/Prototyping%20Wearables%20-%20a%20Code-First%20Approach%20to%20Designing%20Embedded%20Systems.pdf" target="_blank">
+		2.[IoTJ&#39;16]Prototyping Wearables: a Code-First Approach to Designing 
+		Embedded Systems</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/guangy/LEO%20-%20Scheduling%20Sensor%20Inference%20Algorithms%20across%20Heterogeneous%20Mobile%20Processors%20and%20Network%20Resources.pdf" target="_blank">
+                            <br>
+		3.[MobiCom&#39;16] LEO: Scheduling Sensor Inference Algorithms across 
+		Heterogeneous Mobile Processors and Network Resources</a>
+		</span>
+		<br>
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/guangy/An%20Embedded%20Systems%20Laboratory%20to%20Support%20Rapid.pdf" target="_blank">
+		4.[ToE&#39;13]An Embedded Systems Laboratory to Support Rapid Prototyping of 
+		Robotics and the Internet of Things</a>
+		</span>
+		<br>
+
+<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/guangy/A%20Building%20Block%20Approach%20to%20Sensornet%20Systems.pdf" target="_blank">
+		5.[SenSys&#39;08]A Building Block Approach to Sensornet Systems</a>
+		</span>
+
+
+
+		</td>
+
+      <td class="td-green">管高扬</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="td-green" width="15%">10:20~11:05</td>
+      <td class="td-green">
+        <span style="line-height:24px;"><b>acoustic-based motion tracker or novel applications:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/fukb/CAT%20High-Precision%20Acoustic%20Motion%20Tracking.pdf" target="_blank">
+		1.[MobiCom&#39;16]CAT:High-Precision Acoustic Motion Tracking</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/fukb/Device-Free%20Gesture%20Tracking%20Using%20Acoustic%20Signals.pdf" target="_blank">
+		2.[MobiCom&#39;16]Device-Free Gesture Tracking Using Acoustic Signals</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/fukb/DopEnc.pdf" target="_blank">
+                            <br>
+		3.[MobiCom&#39;16]DopEnc:Acoustic-based Encounter Profiling Using Smartphones</a>
+		</span>
+		<br>
+		
+		</td>
+
+
+            <td class="td-green">傅凯博</td>
+    </tr>
+    <tr>
+      <td class="td-green" width="15%">11:05~11:35</td>
+      <td class="td-green">
+		<a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/Idea%20A%20System%20for%20Efficient%20Failure%20Management%20in%20Smart.pdf">
+		[MobiSys&#39;16]Idea: A System for Efficient Failure Management in Smart IoT 
+		environments</a></td>
+      <td class="td-green">程志浩</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">   </td>
+      <td class="td-grey">Lunch</td>
+      <td class="td-grey">  </td>
+    </tr>
+    <tr>
+     <td rowspan="7">Topic2:Mobile Systems</td>
+      <td class="td-blue" width="15%"><b>13:30</b>~14:15</td>
+     		<td class="td-blue">
+        <span style="line-height:24px;"><b>Identify Mobile Apps from Network Traffic:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/caoch/infocom16%20AMPLES.pdf" target="_blank">
+		1.[infocom&#39;16]Approximate matching of persistent LExicon using 
+		search-engines for classifying Mobile app traffic</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/caoch/%5BWiSec16%5Dtcpip%20header%20launch%20time.pdf" target="_blank">
+		2.[WiSec&#39;16] Can Android Applications Be Identified Using Only TCP/IP 
+		Headers of Their Launch Time Traffic</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/caoch/MOBICOM_2015_SAMPLES.pdf" target="_blank">
+                            <br>
+		3.[Mobicom&#39;15]SAMPLES: Self Adaptive Mining of Persistent Lexical Snippets 
+		for Classifying Mobile Application Traffic</a>
+		</span>
+		<br>
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/caoch/infocom15-flowr.pdf" target="_blank">
+		4.[infocom&#39;15]Automatic Generation of Mobile App Signatures from Traffic 
+		Observations</a>
+		</span>
+		<br>
+<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/caoch/%5BPAM2015%5D%20AppPrint.pdf" target="_blank">
+		5.[PAM&#39;15] AppPrint: Automatic Fingerprinting of Mobile Applications in 
+		Network Traffic</a>
+		</span>
+		<br>
+
+		</td>
+
+      <td class="td-blue">曹晨红</td>
+    </tr>
+     <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+
+    <tr>
+      <td class="td-blue" width="15%">14:20~15:05</td>
+      <td class="td-blue">
+        <span style="line-height:24px;"><b>Mobile 
+		Web:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/luoy/WebPerf-SIGCOMM16.pdf" target="_blank">
+		1.[SigComm&#39;16]WebPerf:Evaluating What-If Scenarios for Cloud-hosted Web 
+		Applications</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/luoy/CrowdSurf-SIGCOMM16.pdf" target="_blank">
+		2.[SigComm&#39;16]CrowdSurf:Empowering Transparency in the Web</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/luoy/Mobicom16-ipv6.pdf" target="_blank">
+                            <br>
+		3.[MobiCom&#39;16]A Case for Faster Mobile Web in Cellular IPv6 Networks</a>
+		</span>
+		<br>
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/luoy/conext15-multipath-TCP.pdf" target="_blank">
+		4.[CoNext&#39;15]An Anatomy of Mobile Web Performance over Multipath TCP</a>
+		</span>
+		<br>
+		</td>
+
+      <td class="td-blue">罗阳</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+
+    <tr>
+      <td class="td-blue" width="15%">15:10~15:55</td>
+      <td class="td-blue">
+     
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/songxiy/rnb.pdf" target="_blank">
+		1.[MobiCom&#39;16]RnB:Rate and Brightness Adaptation for 
+		Rate-Distortion-Energy Tradeoff in HTTP Adaptive Streaming over Mobile 
+		Devices </a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/songxiy/cs2p.pdf" target="_blank">
+		2.[SigComm&#39;16]CS2P: Improving Video Bitrate Selection and Adaptation with 
+		Data-Driven Throughput Prediction</a>
+			</span>
+			<br>
+		
+		</td>
+
+         <td class="td-blue">宋心怡</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+    <tr>
+      <td class="td-blue" width="15%">16:00~16:45</td>
+      		 <td class="td-blue">
+        <span style="line-height:24px;"><b>Mobile Network Traffic:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="#" target="_blank">
+		1.[MobiCom&#39;16]MobileInsight: Extracting and Analyzing Cellular Network 
+		Information on Smartphones</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/luoly/Neutral%20Net%20Neutrality.pdf" target="_blank">
+		2.[SigComm&#39;16]Neutral Net Neutrality</a>
+			</span>
+				</td>
+
+      <td class="td-blue">罗路遥</td>
+    </tr>
+    <tr><td colspan="5"></td></tr>
+    <tr>
+      <td rowspan="11">第三天</td>
+      <td rowspan="6">Topic 3:Wireless</td>
+      <td class="td-blue" width="15%"><b>9:30</b>~10:15</td>
+        
+     <td class="td-blue">
+        <span style="line-height:24px;"><b>Recent works in Bluetooth Low Energy:</b><br></span>
+
+		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/cgl-beetle-mobisys2016.pdf" target="_blank">
+		1.[MobiSys&#39;16]Beetle: Flexible communication for Bluetooth Low Energy</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/cgl-mobisys16-BlueEar.pdf" target="_blank">
+		2.[MobiSys&#39;16]Practical Bluetooth Traffic Sniffing: Systems and Privacy 
+		Implications</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/cgl-usenix-sec-2016-kmfawaz.pdf" target="_blank">
+                            <br>
+		3.[USENIX Sec&#39;16]Protecting Privacy of BLE Device Users</a>
+		</span>
+		<br>
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/Conf_2016_SECON.pdf" target="_blank">
+		4.[SECON&#39;16]A Synergistic Architecture for RPL over BLE</a>
+		</span>
+		<br>
+		</td>
+  <td class="td-blue">陈共龙</td>
+    </tr>
+      <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+
+    <tr>
+      <td class="td-blue" width="15%">10:20~11:05</td>
+      		<td class="td-blue">
+        		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/zhangxy/%E3%80%90mobisys'%2016%E3%80%91Practical%20Human%20Sensing%20in%20the%20Light.pdf" target="_blank">
+		1.[MobiSys&#39;16] Practical Human Sensing in the Light&nbsp</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/zhangxy/%E3%80%90mobisys'%2016%E3%80%91Platypus%20%E2%80%94%20Indoor%20Localization%20and%20Identification%20through%20Sensing%20Electric%20Potential%20Changes%20in%20Human%20Bodies.pdf" target="_blank">
+		2.[MobiSys&#39;16]Platypus — Indoor Localization and Identification through 
+		Sensing Electric Potential Changes in Human Bodies</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/zhangxy/%E3%80%90mobisys'16%E3%80%91Listening%20through%20a%20Vibration%20Motor.pdf" target="_blank">
+                            <br>
+		3.[MobiSys&#39;16]Listening through a Vibration Motor</a>
+		</span>
+		<br>
+				</td>
+
+      <td class="td-blue">张啸宇</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Lunch</td>
+      <td class="td-grey">  </td>
+    </tr>
+    <tr>
+ 
+      <td class="td-blue" width="15%"><b>13:30</b>~14:15</td>
+            		<td class="td-blue">
+      		<span style="line-height:24px;"><b>CSI-based activity recognition:</b><br></span>
+
+        		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chenyy/cyy_ipsn15_activity.pdf" target="_blank">
+		1.[IPSN&#39;15]Radio-based Device-free Activity Recognition with Radio 
+		Frequency Interference</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chenyy/cyy-mobisys16-bodyscan.pdf" target="_blank">
+		2.[MobiSys&#39;16]BodyScan: Enabling Radio-based Sensing on Wearable Devices 
+		for Contactless Activity and Vital Sign Monitoring</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/chengl/Conf_2016_SECON.pdf" target="_blank">
+                            <br>
+		3.[IPSN&#39;16]HeadScan: A Wearable System for Radio-based Sensing of Head and 
+		Mouth-related Activities</a>
+		</span>
+		<br>
+				</td>
+
+      <td class="td-blue">陈元瀛</td>
+    </tr>
+     <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+
+    <tr>
+       <td rowspan="5">Topic4:Internet &amp; Measurement</td>
+      <td class="td-pink" width="15%">14:20~15:05</td>
+      		<td class="td-pink">
+      		<span style="line-height:24px;"><b>Network management in a software-defined framework:</b><br></span>
+
+        		         <span style="line-height:24px;">包括论文：<br></span>
+         <span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/lihuikang/sigcomm16-pisces.pdf" target="_blank">
+		1.[SigComm&#39;16]PISCES: A Programmable, Protocol-Independent Software Switch</a>
+		</span>
+		<br>
+		 <span style="line-height:24px;">
+		 <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/lihuikang/nsdi16-paper-SOL.pdf" target="_blank">
+		2.[NSDI&#39;16]Simplifying Software-Defined Network Optimization Using SOL</a>
+			</span>
+			<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/lihuikang/nsdi16-paper-path%20query.pdf" target="_blank">
+                            <br>
+		3.[NSDI&#39;16]Compiling Path Queries</a>
+		</span>
+		<br>
+				</td>
+
+      <td class="td-pink">李惠康</td>
+    </tr>
+    <tr>
+      <td class="td-pink" width="15%">15:05~15:35</td>
+      <td class="td-pink">
+        
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/OpenBox%20A%20Software-Defined%20Framework%20for.pdf" target="_blank">
+		[SigComm &#39;16]OpenBox: A Software-Defined Framework for Developing, 
+		Deploying, and Managing Network Functions</a>
+		</span>
+		<br>
+
+		</td>
+      <td class="td-pink">靖远</td>
+    </tr>
+    <tr>
+      <td class="td-grey" width="15%">&nbsp;</td>
+      <td class="td-grey">Break</td>
+      <td class="td-grey">  </td>
+    </tr>
+
+    <tr>
+      <td class="td-pink" width="15%">15:40~16:10</td>
+      <td class="td-pink">
+      
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/One%20Sketch%20to%20Rule%20Them%20All.pdf" target="_blank">
+		  [SigComm &#39;16]One Sketch to Rule Them All: Rethinking Network Flow 
+		Monitoring with UnivMon</a>
+		</span>
+		<br>
+
+		
+		</td>
+      <td class="td-pink">任伟</td>
+    </tr>
+    <tr>
+      <td class="td-pink" width="15%">16:10~16:40</td>
+      <td class="td-pink">
+        
+		<span style="line-height:24px;">
+                            <a href="https://github.com/luoluyao/EmNets-Summer-Seminar-2016-Program/blob/master/An%20In-depth%20Understanding%20of%20Multipath%20TCP%20on%20Mobile.pdf" target="_blank">
+		  [MobiCom&#39;16]An In-depth Understanding of Mobile Multipath: Measurement 
+		and System Design</a>
+		</span>
+		<br>
+
+		</td>
+      <td class="td-pink">林宇翔</td>
+    </tr>
+    </table>
+</div>
+</div>
+</body>
+
+</body>
+</html>
